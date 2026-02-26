@@ -448,6 +448,52 @@
     });
 
     // ═══════════════════════════════════════
+    // CONTACT FORM HANDLER
+    // ═══════════════════════════════════════
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form submission
+            contactForm.style.display = 'none';
+            if (formSuccess) {
+                formSuccess.hidden = false;
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
+
+    // ═══════════════════════════════════════
+    // BOOKING BAR — Scroll to Tours
+    // ═══════════════════════════════════════
+    const bookingSearchBtn = document.getElementById('bookingSearchBtn');
+    if (bookingSearchBtn) {
+        bookingSearchBtn.addEventListener('click', () => {
+            const toursSection = document.getElementById('tours');
+            if (toursSection) {
+                const offset = 80;
+                const top = toursSection.offsetTop - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    }
+
+    // ═══════════════════════════════════════
+    // BUY / BOOK BUTTONS — Scroll to Contact
+    // ═══════════════════════════════════════
+    $$('.btn-buy').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                const offset = 80;
+                const top = contactSection.offsetTop - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // ═══════════════════════════════════════
     // INITIAL CALLS
     // ═══════════════════════════════════════
     updateNavbar();
@@ -459,3 +505,5 @@
     }, 100);
 
 })();
+
+
