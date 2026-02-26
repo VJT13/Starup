@@ -465,8 +465,24 @@
     }
 
     // ═══════════════════════════════════════
-    // BOOKING BAR — Scroll to Tours
+    // BOOKING WIDGET — Bubble Toggle
     // ═══════════════════════════════════════
+    const bookingWidget = document.getElementById('bookingWidget');
+    const bookingBubble = document.getElementById('bookingBubble');
+    if (bookingBubble && bookingWidget) {
+        bookingBubble.addEventListener('click', () => {
+            bookingWidget.classList.toggle('open');
+        });
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (bookingWidget.classList.contains('open') &&
+                !bookingWidget.contains(e.target)) {
+                bookingWidget.classList.remove('open');
+            }
+        });
+    }
+
+    // Booking search button — scroll to tours
     const bookingSearchBtn = document.getElementById('bookingSearchBtn');
     if (bookingSearchBtn) {
         bookingSearchBtn.addEventListener('click', () => {
@@ -476,6 +492,7 @@
                 const top = toursSection.offsetTop - offset;
                 window.scrollTo({ top, behavior: 'smooth' });
             }
+            if (bookingWidget) bookingWidget.classList.remove('open');
         });
     }
 
