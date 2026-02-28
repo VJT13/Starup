@@ -222,10 +222,10 @@
                     </label>
                     <select id="bookType" class="bpanel-input">
                         <option>Tất cả trải nghiệm</option>
-                        <option>Nặn gốm thủ công</option>
-                        <option>Vẽ men truyền thống</option>
+                        <option>Nặn gốm nghệ nhân</option>
                         <option>Tham quan làng cổ</option>
-                        <option>Tour trọn gói 1 ngày</option>
+                        <option>Ẩm thực Bát Tràng</option>
+                        <option>Tour 2N1Đ Làm Nghệ Nhân</option>
                     </select>
                 </div>
                 <button class="bpanel-submit" id="bookingSearchBtn">
@@ -278,54 +278,45 @@
 
             <!-- Value Cards -->
             <div class="value-grid reveal-up">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14 40 Q14 20 20 16 Q24 12 28 16 Q34 20 34 40" />
-                            <ellipse cx="24" cy="40" rx="12" ry="4" />
-                            <path d="M20 28 Q24 26 28 28" opacity="0.5" />
-                        </svg>
+                <div class="value-card value-card-clickable" id="valueDocBan" style="cursor:pointer;">
+                    <div class="value-img">
+                        <img src="Hình ảnh/Trải nghiệm độc bản/db4303d0-5.jpg" alt="Trải nghiệm độc bản tại Bát Tràng"
+                            loading="lazy">
                     </div>
                     <h3>Trải Nghiệm Độc Bản</h3>
                     <p>Sống trong làng nghề, trực tiếp tham gia các công đoạn khó nhất — tạo ra sản phẩm mang dấu ấn cá
                         nhân thay vì chỉ tham quan.</p>
+                    <span class="value-link">Khám phá thêm →</span>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="24" cy="16" r="6" />
-                            <path d="M12 38 Q12 28 24 28 Q36 28 36 38" />
-                            <path d="M18 14 L14 8M30 14 L34 8" opacity="0.4" />
-                        </svg>
+                <div class="value-card value-card-clickable" id="valueNgheNhan" style="cursor:pointer;">
+                    <div class="value-img">
+                        <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Tô Thanh Sơn.jpg" alt="Nghệ nhân Tô Thanh Sơn"
+                            loading="lazy">
                     </div>
                     <h3>Nghệ Nhân Là Trung Tâm</h3>
                     <p>Mối quan hệ thầy-trò, không chỉ biểu diễn. Nghệ nhân dẫn dắt, kể chuyện và truyền nghề trực tiếp
                         cho bạn.</p>
+                    <span class="value-link">Khám phá thêm →</span>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M24 6 L24 12 M16 10 L18 15 M32 10 L30 15" />
-                            <ellipse cx="24" cy="24" rx="14" ry="10" />
-                            <path d="M24 34 L24 42" />
-                            <path d="M18 42 L30 42" />
-                        </svg>
+                <div class="value-card value-card-clickable" id="valueBenVung" style="cursor:pointer;">
+                    <div class="value-img">
+                        <img src="Hình ảnh/Du lịch bền vững/Làng gốm Bát Tràng.jpg" alt="Cổng làng gốm Bát Tràng"
+                            loading="lazy">
                     </div>
                     <h3>Du Lịch Bền Vững</h3>
                     <p>100% nguyên liệu bản địa, men tự nhiên, quy trình không rác thải. Bắt kịp xu hướng du lịch xanh
                         toàn cầu.</p>
+                    <span class="value-link">Khám phá thêm →</span>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="10" y="8" width="28" height="32" rx="4" />
-                            <path d="M18 16 H30 M18 22 H26" />
-                            <rect x="18" y="28" width="12" height="8" rx="2" opacity="0.3" fill="currentColor" />
-                        </svg>
+                <div class="value-card value-card-clickable" id="valuePromo" style="cursor:pointer;">
+                    <div class="value-img">
+                        <img src="Hình ảnh/ưu đãi đặc biệt/486276723_977615211186926_4441729266041656289_n.jpg"
+                            alt="Ngày hội giá gốc" loading="lazy">
                     </div>
-                    <h3>Số Hóa Di Sản</h3>
-                    <p>QR thuyết minh đa ngôn ngữ, hệ thống booking online, livestream trải nghiệm — phù hợp khách trẻ
-                        và quốc tế.</p>
+                    <h3>Sự Kiện & Ưu Đãi</h3>
+                    <p>Bốc thăm trúng thưởng, ngày hội giá gốc và các ưu đãi đặc biệt dành cho khách đoàn và gia đình.
+                    </p>
+                    <span class="value-link">Khám phá ngay →</span>
                 </div>
             </div>
         </div>
@@ -445,19 +436,10 @@
 
             <div class="tour-grid">
                 <!-- Tour 1: Nặn Gốm -->
-                <div class="tour-card reveal-up">
+                <div class="tour-card reveal-up tour-card-clickable" id="tourNanGom" style="cursor:pointer;">
                     <div class="tour-badge">Phổ biến nhất</div>
                     <div class="tour-visual">
-                        <div class="card-icon-wrap">
-                            <svg viewBox="0 0 80 80" fill="none">
-                                <ellipse cx="40" cy="60" rx="30" ry="8" stroke="currentColor" stroke-width="1.5"
-                                    opacity="0.5" />
-                                <path d="M15 60 Q15 25 25 20 Q35 15 40 10 Q45 15 55 20 Q65 25 65 60"
-                                    stroke="currentColor" stroke-width="2" fill="none" />
-                                <path d="M25 45 Q32 40 40 42 Q48 40 55 45" stroke="currentColor" stroke-width="1"
-                                    opacity="0.4" fill="none" />
-                            </svg>
-                        </div>
+                        <img src="Hình ảnh/Tự tay nặn gốm.jpg" alt="Tự tay nặn gốm" class="tour-img">
                     </div>
                     <div class="tour-content">
                         <div class="tour-meta">
@@ -471,32 +453,25 @@
                             <span class="tour-rating">⭐ 4.9 <small>(128)</small></span>
                         </div>
                         <h3>Tự Tay Nặn Gốm</h3>
-                        <p>Trải nghiệm cảm giác đất sét mềm mịn xoay tròn trên bàn xoay, tạo hình nên tác phẩm dưới
-                            sự hướng dẫn của nghệ nhân.</p>
+                        <p>Trải nghiệm cảm giác đất sét mềm mịn xoay tròn trên bàn xoay, tạo hình dưới sự hướng dẫn của
+                            nghệ nhân.</p>
+                        <span class="value-link"
+                            style="color: var(--gold); margin-bottom: 15px; display: block; font-weight: 600;">Khám phá
+                            ngay →</span>
                         <div class="tour-footer">
                             <div class="tour-price">
-                                <span class="price-value">350.000đ</span>
+                                <span class="price-value">100.000đ</span>
                                 <span class="price-unit">/người</span>
                             </div>
-                            <a href="#contact" class="btn-book">Đặt Ngay</a>
+                            <a href="#contact" class="btn-book" onclick="event.stopPropagation();">Đặt Ngay</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tour 2: Tham Quan Làng Cổ -->
-                <div class="tour-card reveal-up">
+                <div class="tour-card reveal-up tour-card-clickable" id="tourLangCo" style="cursor:pointer;">
                     <div class="tour-visual">
-                        <div class="card-icon-wrap">
-                            <svg viewBox="0 0 80 80" fill="none">
-                                <path d="M15 65 L15 30 L40 15 L65 30 L65 65" stroke="currentColor" stroke-width="2"
-                                    fill="none" />
-                                <rect x="30" y="45" width="20" height="20" stroke="currentColor" stroke-width="1.5"
-                                    fill="none" />
-                                <path d="M35 65 L35 52 L45 52 L45 65" stroke="currentColor" stroke-width="1"
-                                    fill="none" />
-                                <circle cx="40" cy="28" r="3" stroke="currentColor" stroke-width="1" fill="none" />
-                            </svg>
-                        </div>
+                        <img src="Hình ảnh/Tham quan làng cổ.jpg" alt="Tham quan làng cổ" class="tour-img">
                     </div>
                     <div class="tour-content">
                         <div class="tour-meta">
@@ -505,36 +480,31 @@
                                     <circle cx="8" cy="8" r="6" />
                                     <path d="M8 4V8L11 10" />
                                 </svg>
-                                2 giờ
+                                4 giờ
                             </span>
                             <span class="tour-rating">⭐ 4.8 <small>(96)</small></span>
                         </div>
                         <h3>Tham Quan Làng Cổ</h3>
-                        <p>Dạo bước qua con ngõ gạch cổ, ngắm lò nung trăm năm tuổi và lắng nghe câu chuyện từ các
-                            nghệ nhân lão làng.</p>
+                        <p>Dạo bước qua con ngõ gạch cổ, ngắm lò bầu cổ trăm tuổi và lắng nghe câu chuyện từ di sản 700
+                            năm.</p>
+                        <span class="value-link"
+                            style="color: var(--gold); margin-bottom: 15px; display: block; font-weight: 600;">Xem chi
+                            tiết →</span>
                         <div class="tour-footer">
                             <div class="tour-price">
-                                <span class="price-value">250.000đ</span>
+                                <span class="price-value">750.000đ</span>
                                 <span class="price-unit">/người</span>
                             </div>
-                            <a href="#contact" class="btn-book">Đặt Ngay</a>
+                            <a href="#contact" class="btn-book" onclick="event.stopPropagation();">Đặt Ngay</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tour 3: Vẽ Men Gốm -->
-                <div class="tour-card reveal-up">
+                <!-- Tour 3: Ẩm Thực Bát Tràng -->
+                <div class="tour-card reveal-up tour-card-clickable" id="tourAmThuc" style="cursor:pointer;">
                     <div class="tour-visual">
-                        <div class="card-icon-wrap">
-                            <svg viewBox="0 0 80 80" fill="none">
-                                <path d="M25 60 Q20 40 30 25 Q40 10 55 20 Q65 28 60 45 Q55 55 50 60"
-                                    stroke="currentColor" stroke-width="2" fill="none" />
-                                <path d="M35 60 L35 70 Q37 73 40 73 Q43 73 45 70 L45 60" stroke="currentColor"
-                                    stroke-width="1.5" fill="none" />
-                                <circle cx="40" cy="40" r="5" stroke="currentColor" stroke-width="0.8" fill="none"
-                                    opacity="0.4" />
-                            </svg>
-                        </div>
+                        <img src="Hình ảnh/Mâm cỗ Bát Tràng/co-bat-trang-viet-nam.png" alt="Ẩm thực Bát Tràng"
+                            class="tour-img">
                     </div>
                     <div class="tour-content">
                         <div class="tour-meta">
@@ -545,39 +515,30 @@
                                 </svg>
                                 2.5 giờ
                             </span>
-                            <span class="tour-rating">⭐ 4.7 <small>(84)</small></span>
+                            <span class="tour-rating">⭐ 4.9 <small>(112)</small></span>
                         </div>
-                        <h3>Vẽ Men Truyền Thống</h3>
-                        <p>Sáng tạo họa tiết trên gốm — từ hoa văn cổ đến thiết kế hiện đại, mỗi nét vẽ là dấu ấn cá
-                            nhân.</p>
+                        <h3>Ẩm Thực Bát Tràng</h3>
+                        <p>Thưởng thức tinh hoa ẩm thực làng nghề với "món cơm nhà nghệ nhân" và canh măng mực trứ danh.
+                        </p>
+                        <span class="value-link"
+                            style="color: var(--gold); margin-bottom: 15px; display: block; font-weight: 600;">Khám phá
+                            ngay →</span>
                         <div class="tour-footer">
                             <div class="tour-price">
-                                <span class="price-value">280.000đ</span>
-                                <span class="price-unit">/người</span>
+                                <span class="price-value">250.000đ</span>
+                                <span class="price-unit">/suất</span>
                             </div>
-                            <a href="#contact" class="btn-book">Đặt Ngay</a>
+                            <a href="#contact" class="btn-book" onclick="event.stopPropagation();">Đặt Ngay</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tour 4: Tour 2N1Đ Nội Địa -->
-                <div class="tour-card tour-card-featured reveal-up">
+                <!-- Tour 4: Tour 2N1Đ Làm Nghệ Nhân -->
+                <div class="tour-card tour-card-featured reveal-up tour-card-clickable" id="tour2N1D"
+                    style="cursor:pointer;">
                     <div class="tour-badge tour-badge-gold">⭐ Sản Phẩm Chính</div>
                     <div class="tour-visual">
-                        <div class="card-icon-wrap">
-                            <svg viewBox="0 0 80 80" fill="none">
-                                <rect x="10" y="25" width="60" height="40" rx="3" stroke="currentColor" stroke-width="2"
-                                    fill="none" />
-                                <line x1="10" y1="35" x2="70" y2="35" stroke="currentColor" stroke-width="1"
-                                    opacity="0.3" />
-                                <circle cx="25" cy="50" r="8" stroke="currentColor" stroke-width="1" fill="none"
-                                    opacity="0.5" />
-                                <circle cx="45" cy="50" r="6" stroke="currentColor" stroke-width="1" fill="none"
-                                    opacity="0.5" />
-                                <rect x="56" y="42" width="8" height="16" rx="1" stroke="currentColor"
-                                    stroke-width="0.8" fill="none" opacity="0.5" />
-                            </svg>
-                        </div>
+                        <img src="Hình ảnh/Làm nghệ nhân.jpg" alt="Tour 2 ngày 1 đêm" class="tour-img">
                     </div>
                     <div class="tour-content">
                         <div class="tour-meta">
@@ -591,18 +552,23 @@
                             <span class="tour-rating">⭐ 5.0 <small>(67)</small></span>
                         </div>
                         <h3>Tour 2N1Đ "Làm Nghệ Nhân"</h3>
-                        <p>Trải nghiệm trọn vẹn: workshop chế tác gốm, lưu trú homestay, ẩm thực nghệ nhân, tiệc sân
-                            vườn và chứng nhận "Nghệ nhân tập sự".</p>
+                        <p>Trải nghiệm trọn vẹn: workshop chế tác gốm, lưu trú homestay, ẩm thực nghệ nhân và chứng nhận
+                            đặc biệt.</p>
+                        <span class="value-link"
+                            style="color: var(--gold); margin-bottom: 20px; display: block; font-weight: 700;">Xem chi
+                            tiết hành trình →</span>
                         <div class="tour-footer">
                             <div class="tour-price">
                                 <span class="price-value">2.700.000đ</span>
                                 <span class="price-unit">/người</span>
                             </div>
-                            <a href="#contact" class="btn-book btn-book-gold">Đặt Ngay</a>
+                            <a href="#contact" class="btn-book btn-book-gold" onclick="event.stopPropagation();">Đặt
+                                Tour Ngay</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -619,108 +585,544 @@
                     nhân Bát Tràng — mỗi sản phẩm là một câu chuyện văn hóa được kể qua đất và lửa.</p>
             </div>
 
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card reveal-up">
-                    <div class="product-visual">
-                        <svg viewBox="0 0 120 140" fill="none">
-                            <path
-                                d="M55 15 Q60 10, 65 15 L67 50 Q85 65, 78 95 Q72 115, 60 118 Q48 115, 42 95 Q35 65, 53 50 Z"
-                                fill="#4A7BA7" opacity="0.25" />
-                            <path
-                                d="M55 15 Q60 10, 65 15 L67 50 Q85 65, 78 95 Q72 115, 60 118 Q48 115, 42 95 Q35 65, 53 50 Z"
-                                stroke="#D4A843" stroke-width="1" fill="none" />
-                            <path d="M48 75 Q60 70, 72 75" stroke="#F5F0EB" stroke-width="0.5" opacity="0.5" />
-                            <circle cx="60" cy="85" r="8" stroke="#F5F0EB" stroke-width="0.5" fill="none"
-                                opacity="0.3" />
-                        </svg>
+            <div class="product-carousel-wrap">
+                <button class="carousel-arrow carousel-prev" id="shopPrev" aria-label="Trước">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18L9 12L15 6" />
+                    </svg>
+                </button>
+                <div class="product-grid" id="productGrid">
+                    <!-- Product 1: Ấm Gốm Đại Vẽ Vàng -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "ẤM GỐM ĐẠI TRANG TRÍ VẼ VÀNG",
+                    "subtitle": "Kích thước 12cm x 15cm",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn/san-pham/am-gom-dai-trang-tri-ve-vang-kich-thuoc-12cmx15cm/",
+                    "images": [
+                        "Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-1024x1024.jpg",
+                        "Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-2-1024x1024.jpg",
+                        "Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-3-1024x1024.jpg",
+                        "Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-4-1024x1024.jpg",
+                        "Hình ảnh/Hàng bán.jpg"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-1024x1024.jpg"
+                                alt="Ấm Gốm Đại Vẽ Vàng" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ấm Gốm Đại Vẽ Vàng</h3>
+                            <p class="product-desc">Ấm gốm trang trí vẽ vàng, kích thước 12x15cm</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3>Bình Tỳ Bà Men Lam</h3>
-                        <p class="product-desc">Men lam cổ điển, dáng Tỳ Bà thanh mảnh</p>
-                        <div class="product-footer">
-                            <span class="product-price">1.200.000đ</span>
-                            <button class="btn-buy">Mua Ngay</button>
+
+                    <!-- Product 2: Chum Rượu Trống Đồng -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG",
+                    "subtitle": "Loại Lớn — Gốm Bát Tràng chính hãng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn/san-pham/chum-ruou-trong-dong-gom-bat-trang-loai-lon/",
+                    "images": [
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang.jpg",
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang-13.jpg",
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang-14.jpg",
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang-15.jpg",
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang-16.jpg",
+                        "Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang-17.jpg"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/CHUM RƯỢU TRỐNG ĐỒNG GỐM BÁT TRÀNG LOẠI LỚN/chum-ruou-trong-dong-gom-bat-trang.jpg"
+                                alt="Chum Rượu Trống Đồng" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Chum Rượu Trống Đồng</h3>
+                            <p class="product-desc">Gốm Bát Tràng loại lớn, hoa văn trống đồng</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Bóng Thuận Buồm Xuôi Gió -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "BÓNG TRANG TRÍ THUẬN BUỒM XUÔI GIÓ",
+                    "subtitle": "Ngọc Lục Bảo — Gốm Bát Tràng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn/san-pham/bong-trang-tri-thuan-buom-xuoi-gio-ngoc-luc-bao/",
+                    "images": [
+                        "Hình ảnh/BÓNG TRANG TRÍ THUẬN BUỒM XUÔI GIÓ NGỌC LỤC BẢO/bong-thuan-buom-xuoi-gio-ngoc-luc-bao.jpg",
+                        "Hình ảnh/BÓNG TRANG TRÍ THUẬN BUỒM XUÔI GIÓ NGỌC LỤC BẢO/bong-thuan-buom-xuoi-gio-ngoc-luc-bao-4.jpg",
+                        "Hình ảnh/BÓNG TRANG TRÍ THUẬN BUỒM XUÔI GIÓ NGỌC LỤC BẢO/bong-thuan-buom-xuoi-gio-ngoc-luc-bao-5.jpg"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/BÓNG TRANG TRÍ THUẬN BUỒM XUÔI GIÓ NGỌC LỤC BẢO/bong-thuan-buom-xuoi-gio-ngoc-luc-bao.jpg"
+                                alt="Bóng Thuận Buồm Xuôi Gió" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bóng Thuận Buồm Xuôi Gió</h3>
+                            <p class="product-desc">Ngọc Lục Bảo, trang trí phong thủy</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Ấm Chén Men Rạn Bọc Đồng -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "ẤM CHÉN MEN RẠN BỌC ĐỒNG DÁNG BƯỞI",
+                    "subtitle": "Men rạn bọc đồng — Gốm Bát Tràng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn/san-pham/am-chen-men-ran-boc-dong-dang-buoi/",
+                    "images": [
+                        "Hình ảnh/Ấm chén men rạn bọc đồng dáng bưởi/am-chen-men-ran-boc-dong-gom-bat-trang.jpg",
+                        "Hình ảnh/Ấm chén men rạn bọc đồng dáng bưởi/am-chen-men-ran-boc-dong-gom-bat-trang-2.png",
+                        "Hình ảnh/Ấm chén men rạn bọc đồng dáng bưởi/am-chen-men-ran-boc-dong-gom-bat-trang-3.png"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/Ấm chén men rạn bọc đồng dáng bưởi/am-chen-men-ran-boc-dong-gom-bat-trang.jpg"
+                                alt="Ấm Chén Men Rạn Bọc Đồng" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ấm Chén Men Rạn Bọc Đồng</h3>
+                            <p class="product-desc">Men rạn bọc đồng, dáng bưởi thanh lịch</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: Bóng Hút Lộc Lý Liên Ngư -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI",
+                    "subtitle": "Sứ màu đắp nổi — Gốm Bát Tràng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn",
+                    "images": [
+                        "Hình ảnh/BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI/bong-hut-loc-ly-lien-ngu-men-mau-dap-noi.jpg",
+                        "Hình ảnh/BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI/bong-hut-loc-ly-lien-ngu-men-mau-dap-noi-3.jpg",
+                        "Hình ảnh/BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI/bong-hut-loc-ly-lien-ngu-men-mau-dap-noi-4.jpg",
+                        "Hình ảnh/BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI/bong-hut-loc-ly-lien-ngu-men-mau-dap-noi-5.jpg"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/BÓNG HÚT LỘC LÝ LIÊN NGƯ SỨ MÀU ĐẮP NỔI/bong-hut-loc-ly-lien-ngu-men-mau-dap-noi.jpg"
+                                alt="Bóng Hút Lộc Lý Liên Ngư" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bóng Hút Lộc Lý Liên Ngư</h3>
+                            <p class="product-desc">Sứ màu đắp nổi, phong thủy hút lộc</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: Ấm Gốm Đại Hoa Đào -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO",
+                    "subtitle": "Kích thước 43 x 40cm — Gốm Bát Tràng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn",
+                    "images": [
+                        "Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/am-dai-trang-tri-gom-hoa-dao.jpg",
+                        "Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/DSC03428.jpg",
+                        "Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/DSC03432.jpg",
+                        "Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/DSC03434.jpg",
+                        "Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/DSC03435.jpg"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/ẤM GỐM ĐẠI TRANG TRÍ HOA ĐÀO KÍCH THƯỚC 43X40cm/am-dai-trang-tri-gom-hoa-dao.jpg"
+                                alt="Ấm Gốm Đại Hoa Đào" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ấm Gốm Đại Hoa Đào</h3>
+                            <p class="product-desc">Trang trí hoa đào, kích thước 43x40cm</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7: Bát Bảo Liên Đài Men Ngọc -->
+                    <div class="product-card reveal-up" data-product='{
+                    "title": "BÁT BẢO LIÊN ĐÀI MEN NGỌC VẼ VÀNG",
+                    "subtitle": "Men ngọc vẽ vàng — Gốm Bát Tràng",
+                    "price": "Liên hệ",
+                    "link": "https://gombattrang.vn",
+                    "images": [
+                        "Hình ảnh/BÁT BẢO LIÊN ĐÀI MEN NGỌC VẼ VÀNG/bat-bao-lien-dai-gom-bat-trang.jpg",
+                        "Hình ảnh/BÁT BẢO LIÊN ĐÀI MEN NGỌC VẼ VÀNG/bat-bao-lien-dai-gom-bat-trang-5.png"
+                    ]
+                }'>
+                        <div class="product-visual">
+                            <img src="Hình ảnh/BÁT BẢO LIÊN ĐÀI MEN NGỌC VẼ VÀNG/bat-bao-lien-dai-gom-bat-trang.jpg"
+                                alt="Bát Bảo Liên Đài Men Ngọc" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bát Bảo Liên Đài Men Ngọc</h3>
+                            <p class="product-desc">Men ngọc vẽ vàng, phong thủy cao cấp</p>
+                            <div class="product-footer">
+                                <span class="product-price">Liên hệ</span>
+                                <button class="btn-buy">Xem Chi Tiết</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-arrow carousel-next" id="shopNext" aria-label="Tiếp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18L15 12L9 6" />
+                    </svg>
+                </button>
+            </div>
+    </section>
 
-                <!-- Product 2 -->
-                <div class="product-card reveal-up">
-                    <div class="product-visual">
-                        <svg viewBox="0 0 120 140" fill="none">
-                            <path d="M35 90 Q35 60, 60 55 Q85 60, 85 90 Q85 105, 60 108 Q35 105, 35 90Z" fill="#C1694F"
-                                opacity="0.15" />
-                            <path d="M35 90 Q35 60, 60 55 Q85 60, 85 90 Q85 105, 60 108 Q35 105, 35 90Z"
-                                stroke="#D4A843" stroke-width="1" fill="none" />
-                            <path d="M42 78 L50 72 L58 78 L66 72 L74 78" stroke="#C1694F" stroke-width="0.5"
-                                opacity="0.4" />
-                        </svg>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PRODUCT DETAIL MODAL -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="product-modal-overlay" id="productModal" aria-hidden="true">
+        <div class="product-modal">
+            <button class="product-modal-close" id="productModalClose" aria-label="Đóng">&times;</button>
+            <div class="product-modal-body">
+                <!-- Left: Image Gallery (Shopee-style) -->
+                <div class="pm-gallery">
+                    <div class="pm-main-img">
+                        <img id="pmMainImage" src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-1024x1024.jpg"
+                            alt="Sản phẩm gốm">
                     </div>
-                    <div class="product-info">
-                        <h3>Chén Trà Rạn Men</h3>
-                        <p class="product-desc">Rạn men tự nhiên, hòa quyện trà đạo</p>
-                        <div class="product-footer">
-                            <span class="product-price">280.000đ</span>
-                            <button class="btn-buy">Mua Ngay</button>
+                    <div class="pm-thumbs" id="pmThumbs">
+                        <div class="pm-thumb active"
+                            data-img="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-1024x1024.jpg">
+                            <img src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-1024x1024.jpg" alt="Ảnh 1">
+                        </div>
+                        <div class="pm-thumb" data-img="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-2-1024x1024.jpg">
+                            <img src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-2-1024x1024.jpg" alt="Ảnh 2">
+                        </div>
+                        <div class="pm-thumb" data-img="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-3-1024x1024.jpg">
+                            <img src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-3-1024x1024.jpg" alt="Ảnh 3">
+                        </div>
+                        <div class="pm-thumb" data-img="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-4-1024x1024.jpg">
+                            <img src="Hình ảnh/Ấm gốm/am-gom-dai-trang-tri-ve-vang-4-1024x1024.jpg" alt="Ảnh 4">
+                        </div>
+                        <div class="pm-thumb" data-img="Hình ảnh/Hàng bán.jpg">
+                            <img src="Hình ảnh/Hàng bán.jpg" alt="Ảnh 5">
                         </div>
                     </div>
                 </div>
-
-                <!-- Product 3 -->
-                <div class="product-card reveal-up">
-                    <div class="product-visual">
-                        <svg viewBox="0 0 120 140" fill="none">
-                            <path d="M30 85 Q30 55, 60 50 Q90 55, 90 85 Q90 100, 60 103 Q30 100, 30 85Z" fill="#2E7D5B"
-                                opacity="0.12" />
-                            <path d="M30 85 Q30 55, 60 50 Q90 55, 90 85 Q90 100, 60 103 Q30 100, 30 85Z"
-                                stroke="#D4A843" stroke-width="1" fill="none" />
-                            <path d="M47 42 Q50 35, 60 32 Q70 35, 73 42" stroke="#D4A843" stroke-width="0.8"
-                                fill="none" />
-                            <path d="M55 32 Q60 25, 65 32" stroke="#D4A843" stroke-width="0.6" fill="none" />
-                            <circle cx="45" cy="75" r="5" stroke="#D4A843" stroke-width="0.5" fill="none"
-                                opacity="0.3" />
-                            <circle cx="60" cy="78" r="4" stroke="#D4A843" stroke-width="0.5" fill="none"
-                                opacity="0.3" />
-                            <circle cx="75" cy="75" r="5" stroke="#D4A843" stroke-width="0.5" fill="none"
-                                opacity="0.3" />
-                        </svg>
+                <!-- Right: Product Info -->
+                <div class="pm-info">
+                    <h2 class="pm-title" id="pmTitle">ẤM GỐM ĐẠI TRANG TRÍ VẼ VÀNG</h2>
+                    <p class="pm-subtitle">Kích thước 12cm x 15cm</p>
+                    <div class="pm-price-box">
+                        <span class="pm-price-label">Giá</span>
+                        <span class="pm-price" id="pmPrice">Liên hệ</span>
                     </div>
-                    <div class="product-info">
-                        <h3>Bộ Ấm Trà Men Ngọc</h3>
-                        <p class="product-desc">Men ngọc xanh, bộ ấm 1 tích + 4 chén</p>
-                        <div class="product-footer">
-                            <span class="product-price">2.500.000đ</span>
-                            <button class="btn-buy">Mua Ngay</button>
+                    <div class="pm-guarantees">
+                        <div class="pm-guarantee-item">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="#C1694F" stroke-width="1.5">
+                                <path d="M10 2L12 7H18L13 11L15 17L10 13L5 17L7 11L2 7H8Z" />
+                            </svg>
+                            <span>Giá xuất xưởng không qua trung gian</span>
+                        </div>
+                        <div class="pm-guarantee-item">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="#C1694F" stroke-width="1.5">
+                                <path d="M3 10L8 15L17 5" />
+                            </svg>
+                            <span>Bảo hành 1 đổi 1</span>
+                        </div>
+                        <div class="pm-guarantee-item">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="#C1694F" stroke-width="1.5">
+                                <path d="M2 6H18V16H2Z M2 6L10 12L18 6" />
+                            </svg>
+                            <span>Giao hàng nhanh chóng</span>
+                        </div>
+                        <div class="pm-guarantee-item">
+                            <svg viewBox="0 0 20 20" fill="none" stroke="#C1694F" stroke-width="1.5">
+                                <circle cx="10" cy="10" r="7" />
+                                <path d="M10 6V10L13 13" />
+                            </svg>
+                            <span>Cam kết gốm Bát Tràng chính hãng</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card reveal-up">
-                    <div class="product-visual">
-                        <svg viewBox="0 0 120 140" fill="none">
-                            <path d="M45 25 Q60 20, 75 25 L78 80 Q78 110, 60 115 Q42 110, 42 80 Z" fill="#D4A843"
-                                opacity="0.12" />
-                            <path d="M45 25 Q60 20, 75 25 L78 80 Q78 110, 60 115 Q42 110, 42 80 Z" stroke="#D4A843"
-                                stroke-width="1" fill="none" />
-                            <path d="M50 55 Q60 48, 70 55" stroke="#C1694F" stroke-width="0.6" opacity="0.4" />
-                            <path d="M52 70 Q60 65, 68 70" stroke="#C1694F" stroke-width="0.6" opacity="0.3" />
-                            <path d="M53 85 Q60 80, 67 85" stroke="#C1694F" stroke-width="0.4" opacity="0.3" />
+                    <a href="https://gombattrang.vn/san-pham/am-gom-dai-trang-tri-ve-vang-kich-thuoc-12cmx15cm/"
+                        target="_blank" rel="noopener" class="pm-buy-btn">
+                        🛒 Mua Ngay
+                    </a>
+                    <div class="pm-hotline">
+                        <svg viewBox="0 0 20 20" fill="none" stroke="#C1694F" stroke-width="1.5">
+                            <path d="M3 3H7L9 8L6.5 9.5C7.5 12 9 14 11.5 15.5L13 13L18 15V19H17C9 19 2 12 2 4V3Z" />
                         </svg>
-                    </div>
-                    <div class="product-info">
-                        <h3>Lọ Hoa Sen Vàng</h3>
-                        <p class="product-desc">Dáng lọ thanh, hoa văn sen vàng tinh xảo</p>
-                        <div class="product-footer">
-                            <span class="product-price">980.000đ</span>
-                            <button class="btn-buy">Mua Ngay</button>
+                        <div>
+                            <strong>Gọi mua hàng: 0982 118 885</strong><br>
+                            <small>(24/24 T2 - CN)</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Trải nghiệm độc bản -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="articleModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="articleModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Trải nghiệm độc bản/R.jpg" alt="Trải nghiệm làm gốm Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Trải Nghiệm Độc Bản</span>
+                        <h2>Một Ngày Sống Cùng Nghệ Nhân Bát Tràng</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-lead">Không chỉ đến xem — bạn sẽ <strong>sống, làm và cảm nhận</strong> cùng
+                        nghệ nhân tại ngôi làng gốm sứ hơn 700 năm tuổi. Đây là trải nghiệm chỉ có tại
+                        <em>Một Chuyến Đi – Một Làng Việt</em>.
+                    </p>
+
+                    <div class="article-img-row">
+                        <figure>
+                            <img src="Hình ảnh/Trải nghiệm độc bản/db4303d0-5.jpg" alt="Cùng nhau nặn gốm">
+                            <figcaption>Tự tay nặn gốm trên bàn xoay thủ công</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Hình ảnh/Trải nghiệm độc bản/nghe-nhan-bat-trang.jpg" alt="Nghệ nhân vẽ men">
+                            <figcaption>Xưởng vẽ men của nghệ nhân Bát Tràng</figcaption>
+                        </figure>
+                    </div>
+
+                    <h3>Tham Gia Từng Công Đoạn</h3>
+                    <p>Bạn sẽ trải nghiệm trọn vẹn quy trình chế tác gốm: từ nhào đất, tạo hình trên bàn xoay,
+                        vẽ men thủ công, đến nung lò củi truyền thống. Mỗi sản phẩm bạn tạo ra đều mang dấu ấn
+                        cá nhân — không có hai tác phẩm giống nhau.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/Trải nghiệm độc bản/lang_gom_bat_trang_02.jpg"
+                            alt="Gia đình quốc tế làm gốm">
+                        <figcaption>Gia đình quốc tế trải nghiệm vẽ men tại xưởng gốm</figcaption>
+                    </div>
+
+                    <h3>Nghệ Nhân Dẫn Dắt — Không Chỉ Biểu Diễn</h3>
+                    <p>Khác hoàn toàn với tour tham quan thông thường, tại đây nghệ nhân sẽ là người thầy trực tiếp
+                        hướng dẫn bạn. Mối quan hệ thầy-trò giúp bạn hiểu sâu hơn về tâm huyết, kỹ thuật và
+                        câu chuyện đằng sau mỗi tác phẩm gốm sứ.</p>
+
+                    <div class="article-img-row">
+                        <figure>
+                            <img src="Hình ảnh/Trải nghiệm độc bản/du-lich-bat-trang-7.webp" alt="Du lịch Bát Tràng">
+                            <figcaption>Khám phá con ngõ gạch cổ trong làng</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Hình ảnh/Trải nghiệm độc bản/du-lich-bat-trang-8.webp" alt="Sản phẩm gốm">
+                            <figcaption>Sản phẩm gốm sứ đa dạng tại Bát Tràng</figcaption>
+                        </figure>
+                    </div>
+
+                    <h3>Mang Về Ký Ức Không Thể Quên</h3>
+                    <p>Kết thúc trải nghiệm, bạn sẽ nhận được sản phẩm gốm do chính tay mình tạo ra cùng chứng
+                        nhận "Nghệ nhân tập sự" — một kỷ niệm vô giá từ ngôi làng nghề ngàn năm tuổi.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/Trải nghiệm độc bản/FB_IMG_1669254632055-1.jpg"
+                            alt="Sản phẩm gốm hoàn thiện">
+                        <figcaption>Niềm vui khi cầm trên tay tác phẩm gốm của chính mình</figcaption>
+                    </div>
+
+                    <div class="article-cta">
+                        <a href="#tours" class="btn-primary"
+                            onclick="document.getElementById('articleModal').classList.remove('active');document.body.style.overflow='';">
+                            Đặt Trải Nghiệm Ngay →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Nghệ nhân Bát Tràng -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="artisanModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="artisanModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Tô Thanh Sơn.jpg" alt="Nghệ nhân gốm Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Nghệ Nhân Là Trung Tâm</span>
+                        <h2>Những Bàn Tay Vàng Của Làng Gốm Bát Tràng</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-lead">Hơn 700 năm lịch sử, làng gốm Bát Tràng đã sản sinh ra những nghệ nhân
+                        tài hoa — mỗi người là một kho tàng kỹ thuật và câu chuyện văn hóa sống động.</p>
+
+                    <!-- Nghệ nhân Trần Độ -->
+                    <div class="artisan-profile">
+                        <div class="artisan-photo">
+                            <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ Nhân Trần Độ.jpg" alt="Nghệ nhân Trần Độ">
+                        </div>
+                        <div class="artisan-bio">
+                            <h3>Nghệ Nhân Nhân Dân Trần Độ</h3>
+                            <span class="artisan-title">"Vua Men Gốm" Bát Tràng</span>
+                            <p>Nghệ nhân nhân dân duy nhất của làng Bát Tràng được Nhà nước phong tặng danh hiệu.
+                                Từ năm 10 tuổi đã theo cha đến lò gốm, ông đã tạo ra 12 công thức pha chế men ngọc
+                                và hơn 70 loại men cổ quý hiếm.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nghệ nhân Tô Thanh Sơn -->
+                    <div class="artisan-profile">
+                        <div class="artisan-photo">
+                            <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Tô Thanh Sơn.jpg" alt="Nghệ nhân Tô Thanh Sơn">
+                        </div>
+                        <div class="artisan-bio">
+                            <h3>Nghệ Nhân Tô Thanh Sơn</h3>
+                            <span class="artisan-title">"Thu cả vũ trụ vào cái chén nhỏ"</span>
+                            <p>Một trong bốn trụ cột gốm của làng Bát Tràng, nghệ nhân Tô Thanh Sơn nổi tiếng
+                                với khả năng biến những chiếc chén nhỏ bé thành tác phẩm nghệ thuật chứa đựng
+                                cả tinh hoa văn hóa ngàn năm.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nghệ nhân Vương Mạnh Tuấn -->
+                    <div class="artisan-profile">
+                        <div class="artisan-photo">
+                            <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Vương Mạnh Tuấn.jpg"
+                                alt="Nghệ nhân Vương Mạnh Tuấn">
+                        </div>
+                        <div class="artisan-bio">
+                            <h3>Nghệ Nhân Vương Mạnh Tuấn</h3>
+                            <span class="artisan-title">Bậc thầy ấm Tử Sa — 40+ năm thâm niên</span>
+                            <p>Nổi tiếng với sản phẩm ấm Tử Sa, ông không ngừng tìm kiếm chất liệu đất mới,
+                                mang lại tính dẻo, dai và độ bền vượt trội. Hơn 40 năm cống hiến cho nghề gốm
+                                truyền thống Bát Tràng.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nghệ nhân Nguyễn Văn Hưng -->
+                    <div class="artisan-profile">
+                        <div class="artisan-photo">
+                            <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Nguyễn Văn Hưng.webp"
+                                alt="Nghệ nhân Nguyễn Văn Hưng">
+                        </div>
+                        <div class="artisan-bio">
+                            <h3>Nghệ Nhân Nguyễn Văn Hưng</h3>
+                            <span class="artisan-title">Họa sĩ trên gốm — Dấu ấn dân tộc</span>
+                            <p>Con trai nghệ nhân Nguyễn Văn Cổn, ông nổi tiếng với tài năng vẽ tranh trên gốm.
+                                Các tác phẩm mang đậm bản sắc dân tộc, thể hiện sự độc đáo và tinh hoa trong
+                                nghệ thuật gốm sứ Việt Nam.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nghệ nhân Vũ Đức Thắng -->
+                    <div class="artisan-profile">
+                        <div class="artisan-photo">
+                            <img src="Hình ảnh/Nghệ nhân Gốm/Nghệ nhân Vũ Đức Thắng.jpg" alt="Nghệ nhân Vũ Đức Thắng">
+                        </div>
+                        <div class="artisan-bio">
+                            <h3>Nghệ Nhân Vũ Đức Thắng</h3>
+                            <span class="artisan-title">Bậc thầy khắc chìm & đắp nổi</span>
+                            <p>Hơn 40 năm kinh nghiệm, ông luôn sáng tạo tìm tòi kỹ thuật mới. Kỹ thuật
+                                khắc chìm, đắp nổi trên gốm và phủ men chồng màu là điểm mạnh tạo nên
+                                những sản phẩm độc đáo và ấn tượng.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-cta">
+                        <a href="#tours" class="btn-primary"
+                            onclick="document.getElementById('artisanModal').classList.remove('active');document.body.style.overflow='';">
+                            Đặt Tour Gặp Nghệ Nhân →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Du lịch bền vững -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="sustainableModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="sustainableModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Du lịch bền vững/bao-tang-gom-bat-trang-top-banner.jpg"
+                        alt="Bảo tàng gốm Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Du Lịch Bền Vững</span>
+                        <h2>Bảo Tồn Di Sản & Phát Triển Xanh</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-lead">Tại Bát Tràng, du lịch bền vững không chỉ là khẩu hiệu. Đó là sự kết hợp hài
+                        hòa giữa <strong>giữ gìn kiến trúc cổ</strong>, sử dụng <strong>nguyên liệu xanh</strong> và
+                        phát triển kinh tế làng nghề bền bỉ.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/Du lịch bền vững/Làng gốm Bát Tràng.jpg" alt="Cổng làng Bát Tràng">
+                        <figcaption>Cổng làng cổ — biểu tượng của sự tiếp nối văn hóa</figcaption>
+                    </div>
+
+                    <h3>Kiến Trúc & Di Sản Cổ</h3>
+                    <p>Hành trình dẫn bạn qua những con ngõ nhỏ lắt léo, nơi những vách tường rêu phong và những ngôi
+                        nhà gỗ cổ hàng trăm năm vẫn được người dân nâng niu. Đình làng Bát Tràng và các nhà cổ là minh
+                        chứng sống động cho nỗ lực bảo tồn kiến trúc của cộng đồng.</p>
+
+                    <div class="article-img-row">
+                        <figure>
+                            <img src="Hình ảnh/Du lịch bền vững/dinh-lang-bat-trang-1751517135.jpeg"
+                                alt="Đình làng Bát Tràng">
+                            <figcaption>Đình làng Bát Tràng ven sông Hồng</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Hình ảnh/Du lịch bền vững/nha-co-van-van-1751517782.jpg" alt="Nhà cổ Vạn Vân">
+                            <figcaption>Nhà cổ Vạn Vân — nơi lưu giữ nghìn mẫu gốm</figcaption>
+                        </figure>
+                    </div>
+
+                    <h3>Gốm Xanh & Nguyên Liệu Tự Nhiên</h3>
+                    <p>Một làng Việt ưu tiên sử dụng 100% nguyên liệu đất bản địa, men tự nhiên từ tro, đá và quy trình
+                        sản xuất tối thiểu rác thải. Việc chuyển đổi từ lò than truyền thống sang lò gas hiện đại đã
+                        giúp giảm thiểu khí thải, giữ cho bầu không khí làng nghề luôn trong lành.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/Du lịch bền vững/battrang-2-1717155346.jpg" alt="Showroom gốm bền vững">
+                        <figcaption>Không gian trưng bày gốm sứ kết hợp nghệ thuật hiện đại</figcaption>
+                    </div>
+
+                    <h3>Lan Tỏa Ý Thức Cộng Đồng</h3>
+                    <p>Mỗi lượt khách đến với Một Làng Việt đều góp phần vào quỹ bảo tồn nghệ nhân già và hỗ trợ các cơ
+                        sở sản xuất thủ công nhỏ lẻ. Chúng tôi khuyến khích du khách hạn chế nhựa dùng một lần và trân
+                        trọng các tác phẩm thủ công có tuổi thọ gắn liền với dòng thời gian.</p>
+
+                    <div class="article-cta">
+                        <a href="#tours" class="btn-primary"
+                            onclick="document.getElementById('sustainableModal').classList.remove('active');document.body.style.overflow='';">
+                            Trải Nghiệm Ngay →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ═══════════════════════════════════════ -->
     <!-- CONTACT & BOOKING SECTION -->
@@ -758,10 +1160,10 @@
                                 <label for="ftour">Loại tour *</label>
                                 <select id="ftour" required>
                                     <option value="">Chọn trải nghiệm...</option>
-                                    <option>Nặn gốm thủ công — 350.000đ/người</option>
-                                    <option>Tham quan làng cổ — 250.000đ/người</option>
-                                    <option>Vẽ men truyền thống — 280.000đ/người</option>
-                                    <option>Tour trọn gói 1 ngày — 890.000đ/người</option>
+                                    <option>Tự tay nặn gốm — 100.000đ/người</option>
+                                    <option>Tham quan làng cổ — 750.000đ/người</option>
+                                    <option>Ẩm thực Bát Tràng — 250.000đ/suất</option>
+                                    <option>Tour 2N1Đ Làm Nghệ Nhân — 2.700.000đ/người</option>
                                 </select>
                             </div>
                         </div>
@@ -875,6 +1277,418 @@
     <!-- ═══════════════════════════════════════ -->
     <!-- FOOTER -->
     <!-- ═══════════════════════════════════════ -->
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Sự kiện & Ưu đãi -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="promoModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="promoModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/ưu đãi đặc biệt/486276723_977615211186926_4441729266041656289_n.jpg"
+                        alt="Ngày hội giá gốc">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Sự Kiện & Ưu Đãi</span>
+                        <h2>Ngày Hội Di Sản — Ngàn Ưu Đãi Vàng</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p class="article-lead">Chào đón mùa lễ hội và tri ân khách hàng, Một Làng Việt phối hợp cùng Trung
+                        tâm Gốm Nghệ nhân Bát Tràng mang đến chuỗi sự kiện và ưu đãi bùng nổ.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/ưu đãi đặc biệt/486547509_977615204520260_4761432983274626120_n.jpg"
+                            alt="Bốc thăm trúng thưởng">
+                        <figcaption>Chương trình bốc thăm may mắn — Mua sắm thả ga không lo về giá</figcaption>
+                    </div>
+
+                    <h3>Ngày Hội Giá Gốc — Duy Nhất 1 Ngày</h3>
+                    <p>Cơ hội sở hữu những tác phẩm gốm sứ tinh xảo với mức giá trực tiếp từ lò của nghệ nhân. Sự kiện
+                        diễn ra tại Trung tâm Gốm Nghệ nhân Bát Tràng, thu hút đông đảo du khách và người yêu nghệ thuật
+                        mỗi kỳ tổ chức.</p>
+
+                    <div class="article-img-full">
+                        <img src="Hình ảnh/ưu đãi đặc biệt/30741491_2028608067359758_7864466602266198016_n.jpg"
+                            alt="Showroom gốm nghệ nhân">
+                        <figcaption>Không gian trưng bày hàng nghìn sản phẩm gốm sứ độc bản</figcaption>
+                    </div>
+
+                    <h3>Ưu Đãi Đặc Biệt Cho Tour & Khách Đoàn</h3>
+                    <p>Nhóm khách từ 5 người trở lên hoặc khách đoàn gia đình sẽ nhận ngay ưu đãi giảm 10% phí tour trải
+                        nghiệm "Nghệ nhân tập sự". Ngoài ra, mỗi du khách tham gia tour sẽ nhận được một món quà lưu
+                        niệm gốm sứ đặc biệt mang dấu ấn cá nhân.</p>
+
+                    <div class="article-cta">
+                        <a href="#tours" class="btn-primary"
+                            onclick="document.getElementById('promoModal').classList.remove('active');document.body.style.overflow='';">
+                            Xem Ngay Ưu Đãi →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Tự tay nặn gốm -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="potteryModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="potteryModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Tự tay nặn gốm.jpg" alt="Tự tay nặn gốm tại Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Trải Nghiệm Nghệ Nhân</span>
+                        <h2>Làm Nghệ Nhân Gốm Không Chuyên Tại Bát Tràng</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="experience-pitch">
+                        <p class="article-lead">Bạn đã bao giờ tự hỏi cảm giác khi đôi bàn tay chạm vào đất sét mềm mịn,
+                            xoay tròn nhịp nhàng trên bàn xoay và tự mình tạo nên một tác phẩm nghệ thuật?</p>
+
+                        <div class="experience-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">👐</div>
+                                <h4>Cầm tay chỉ việc</h4>
+                                <p>Đội ngũ thợ lành nghề hướng dẫn 1-1 cho đến khi bạn thành thục.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🎨</div>
+                                <h4>Sáng tạo tự do</h4>
+                                <p>Tự mình thiết kế kiểu dáng và vẽ họa tiết mang dấu ấn cá nhân.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🔥</div>
+                                <h4>Thành phẩm thực tế</h4>
+                                <p>Sản phẩm được nung đốt và tráng men chuyên nghiệp để bạn mang về.</p>
+                            </div>
+                        </div>
+
+                        <div class="workshop-journey">
+                            <h3>Hành Trình Trở Thành Nghệ Nhân</h3>
+                            <div class="journey-steps">
+                                <div class="j-step">
+                                    <span class="j-num">01</span>
+                                    <h5>Chạm vào Đất</h5>
+                                    <p>Làm quen với đất sét Bát Tràng trứ danh, nhào nặn để cảm nhận độ dẻo và sức sống
+                                        của đất.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">02</span>
+                                    <h5>Tạo hình Bàn xoay</h5>
+                                    <p>Đưa đất lên bàn xoay, điều khiển đôi bàn tay để "vũ điệu của đất" tạo nên hình
+                                        hài chiếc bát, chiếc bình.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">03</span>
+                                    <h5>Thổi hồn qua Họa tiết</h5>
+                                    <p>Sử dụng các loại bút lông chuyên dụng, tô điểm sắc màu và hoa văn lên tác phẩm
+                                        còn ướt.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">04</span>
+                                    <h5>Nung đốt & Hoàn thiện</h5>
+                                    <p>Tác phẩm của bạn sẽ được "vượt qua lửa đỏ" trong lò nung để trở nên vĩnh cửu.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-info-box">
+                            <div class="info-header">Lựa chọn trải nghiệm</div>
+                            <div class="info-options">
+                                <div class="opt-card">
+                                    <div class="opt-name">Gói "Chạm" (Cơ bản)</div>
+                                    <div class="opt-price">50.000đ</div>
+                                    <p>Trải nghiệm nặn gốm tại chỗ cùng thợ, không mang sản phẩm về.</p>
+                                </div>
+                                <div class="opt-card opt-featured">
+                                    <div class="opt-name">Gói "Nghệ Nhân" (Trọn gói)</div>
+                                    <div class="opt-price">100.000đ</div>
+                                    <p>Bao gồm nặn gốm, vẽ màu, nung đốt, tráng men và mang thành phẩm về.</p>
+                                </div>
+                            </div>
+                            <p class="info-note">* Địa điểm: Sân nặn gốm Lò Bầu Cổ — không gian di sản hơn 100 năm tuổi.
+                            </p>
+                        </div>
+
+                        <div class="article-cta sales-cta">
+                            <div class="cta-message">Sẵn sàng để tạo nên kỷ niệm của riêng bạn?</div>
+                            <a href="#contact" class="btn-primary"
+                                onclick="document.getElementById('potteryModal').classList.remove('active');document.body.style.overflow='';">
+                                Đặt Chỗ Ngay Bây Giờ →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Tham quan làng cổ -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="villageTourModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="villageTourModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Tham quan làng cổ.jpg" alt="Tham quan làng cổ Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Di Sản & Ký Ức</span>
+                        <h2>Hành Trình Khám Phá Làng Việt Cổ 700 Năm</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="experience-pitch">
+                        <p class="article-lead">Bát Tràng không chỉ có gốm. Nơi đây còn là một "bảo tàng sống" với những
+                            con ngõ nhỏ quanh co, những bức tường gạch cổ kính và những di tích ghi dấu ấn lịch sử hàng
+                            thế kỷ.</p>
+
+                        <div class="experience-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">⛩️</div>
+                                <h4>Đình Làng Bát Tràng</h4>
+                                <p>Chiêm ngưỡng kiến trúc đình cổ, nơi thờ thành hoàng làng và tổ nghề gốm.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🐚</div>
+                                <h4>Lò Bầu Cổ</h4>
+                                <p>Tham quan lò bầu cổ duy nhất còn sót lại, minh chứng cho kỹ thuật nung gốm xưa.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🧱</div>
+                                <h4>Ngõ Gạch Reo</h4>
+                                <p>Dạo bước trong những con ngõ nhỏ lát gạch đặc trưng của làng quê đồng bằng Bắc Bộ.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h3>Câu Chuyện Từ Di Sản</h3>
+                        <p>Tour tham quan làng cổ sẽ đưa bạn đi qua thời gian, từ sự hình thành làng nghề vào thế kỷ 14
+                            đến sự phát triển hưng thịnh ngày nay. Bạn sẽ được lắng nghe những câu chuyện kể về đức tổ
+                            nghề và sự tích dòng men cổ được lưu truyền qua nhiều thế hệ.</p>
+
+                        <div class="experience-info-box">
+                            <div class="info-header">Thông tin tour</div>
+                            <div class="info-options">
+                                <div class="opt-card">
+                                    <div class="opt-name">Tour Tham Quan (1 ngày)</div>
+                                    <div class="opt-price">750.000đ</div>
+                                    <p>Bao gồm: Hướng dẫn viên, xe điện, vé tham quan các điểm di sản và bữa trưa địa
+                                        phương.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-cta sales-cta">
+                            <div class="cta-message">Khám phá chiều sâu văn hóa làng nghề cùng chúng tôi?</div>
+                            <a href="#contact" class="btn-primary"
+                                onclick="document.getElementById('villageTourModal').classList.remove('active');document.body.style.overflow='';">
+                                Đặt Tour Tham Quan →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Ẩm thực Bát Tràng -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="cuisineModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="cuisineModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Mâm cỗ Bát Tràng/co-bat-trang-viet-nam.png" alt="Ẩm thực Bát Tràng">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Tinh Hoa Ẩm Thực</span>
+                        <h2>Ẩm Thực Bát Tràng — Vị Quê Trong Lòng Phố</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="experience-pitch">
+                        <p class="article-lead">Đến với Bát Tràng, bạn không chỉ được mãn nhãn với gốm mà còn được say
+                            lòng với những món ăn mang đậm bản sắc văn hóa của một làng quê Việt cổ.</p>
+
+                        <div class="experience-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🍲</div>
+                                <h4>Canh Măng Mực</h4>
+                                <p>Món ăn "quốc hồn quốc túy" của làng gốm, tinh tế và đòi hỏi sự kỳ công trong chế
+                                    biến.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🍱</div>
+                                <h4>Cơm Nhà Nghệ Nhân</h4>
+                                <p>Thưởng thức bữa cơm gia đình mộc mạc nhưng đậm đà hương vị cùng các nghệ nhân địa
+                                    phương.</p>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🍵</div>
+                                <h4>Thưởng Trà Chào Mừng</h4>
+                                <p>Nhấp ngụm trà sen thơm ngát trong không gian yên bình của những ngôi nhà cổ.</p>
+                            </div>
+                        </div>
+
+                        <h3>Vị Ngọt Của Thời Gian</h3>
+                        <p>Văn hóa ẩm thực Bát Tràng gắn liền với lối sống chỉn chu, thanh tao của người thợ gốm. Mỗi
+                            món ăn là một tác phẩm nghệ thuật, từ cách chọn nguyên liệu tự nhiên đến cách trình bày trên
+                            những bộ đồ gốm sứ do chính tay nghệ nhân làng mình làm ra.</p>
+
+                        <div class="article-img-row">
+                            <figure>
+                                <img src="Hình ảnh/Mâm cỗ Bát Tràng/mam-co-bat-trang-6.jpg" alt="Mâm cỗ truyền thống">
+                                <figcaption>Mâm cỗ truyền thống Bát Tràng</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Hình ảnh/Mâm cỗ Bát Tràng/dac-trung-am-thuc-bat-trang-1.jpg"
+                                    alt="Đặc sản Bát Tràng">
+                                <figcaption>Hương vị đặc trưng của làng cổ</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="article-img-full">
+                            <img src="Hình ảnh/Mâm cỗ Bát Tràng/dac-trung-am-thuc-bat-trang-2.jpg"
+                                alt="Nghệ thuật trình bày món ăn">
+                            <figcaption>Sự tinh tế trong cách trình bày và chọn nguyên liệu</figcaption>
+                        </div>
+
+                        <div class="article-img-row">
+                            <figure>
+                                <img src="Hình ảnh/Mâm cỗ Bát Tràng/dac-trung-am-thuc-bat-trang-16.jpg"
+                                    alt="Canh măng mực">
+                                <figcaption>Canh măng mực — món ăn trứ danh</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Hình ảnh/Mâm cỗ Bát Tràng/dac-trung-am-thuc-bat-trang-36.jpg"
+                                    alt="Ẩm thực làng nghề">
+                                <figcaption>Kết tinh văn hóa ẩm thực 700 năm</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="experience-info-box">
+                            <div class="info-header">Lựa chọn trải nghiệm</div>
+                            <div class="info-options">
+                                <div class="opt-card">
+                                    <div class="opt-name">Set Cỗ Truyền Thống</div>
+                                    <div class="opt-price">250.000đ</div>
+                                    <p>Thưởng thức đầy đủ mâm cỗ Bát Tràng kèm thuyết minh về văn hóa ẩm thực làng nghề.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-cta sales-cta">
+                            <div class="cta-message">Mời bạn thưởng thức mâm cỗ Bát Tràng!</div>
+                            <a href="#contact" class="btn-primary"
+                                onclick="document.getElementById('cuisineModal').classList.remove('active');document.body.style.overflow='';">
+                                Đặt Chỗ Ngay Bây Giờ →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ARTICLE MODAL — Tour 2N1Đ Làm Nghệ Nhân -->
+    <!-- ═══════════════════════════════════════ -->
+    <div class="article-modal-overlay" id="artisanTourModal" aria-hidden="true">
+        <div class="article-modal">
+            <button class="article-modal-close" id="artisanTourModalClose" aria-label="Đóng">&times;</button>
+            <div class="article-scroll">
+                <div class="article-hero">
+                    <img src="Hình ảnh/Làm nghệ nhân.jpg" alt="Tour 2 ngày 1 đêm Làm Nghệ Nhân">
+                    <div class="article-hero-overlay">
+                        <span class="article-tag">Sản Phẩm Cốt Lõi</span>
+                        <h2>Tour 2 Ngày 1 Đêm: "Một Ngày Làm Nghệ Nhân — Một Đời Giữ Ký ỨC"</h2>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <div class="experience-pitch">
+                        <p class="article-lead">Hành trình độc bản giúp bạn từ một du khách trở thành "người con của
+                            làng", trực tiếp tham gia vào nhịp sống và chế tác tinh hoa gốm sứ cùng nghệ nhân.</p>
+
+                        <div class="workshop-journey">
+                            <h3>Lịch Trình Chi Tiết</h3>
+                            <div class="journey-steps">
+                                <div class="j-step">
+                                    <span class="j-num">D1</span>
+                                    <h5>Sáng: Chạm vào đất — Chạm vào ký ức</h5>
+                                    <p>Đón khách, thưởng trà tại homestay. Tham quan làng cổ, đình làng và lò bầu cổ,
+                                        nghe kể chuyện di sản.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">D1</span>
+                                    <h5>Chiều: Workshop Nghệ Nhân (P1)</h5>
+                                    <p>Tự tay vuốt gốm cơ bản trên bàn xoay. Tham quan Bảo tàng Gốm (Trung tâm Tinh hoa
+                                        Làng nghề Việt).</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">D1</span>
+                                    <h5>Tối: Tiệc Sân Vườn</h5>
+                                    <p>Giao lưu kể chuyện nghề cùng nghệ nhân lão làng. Nghỉ đêm tại Craft-stay truyền
+                                        thống.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">D2</span>
+                                    <h5>Sáng: Trở thành nghệ nhân (P2)</h5>
+                                    <p>Workshop chuyên sâu: chạm khắc hoa văn, trang trí men lam/rạn. Tìm hiểu kỹ thuật
+                                        nung đốt chuyên nghiệp.</p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">D2</span>
+                                    <h5>Trưa: Ẩm thực kết nối</h5>
+                                    <p>Cùng nghệ nhân chuẩn bị bữa trưa "Ẩm thực làng cổ". Giao lưu và chia sẻ kỷ niệm.
+                                    </p>
+                                </div>
+                                <div class="j-step">
+                                    <span class="j-num">D2</span>
+                                    <h5>Chiều: Trao chứng nhận</h5>
+                                    <p>Nhận chứng nhận "Nghệ nhân tập sự" và chụp ảnh lưu niệm. Mua sắm gốm tại xưởng
+                                        chính thống.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-info-box">
+                            <div class="info-header">Giá Tour Trọn Gói</div>
+                            <div class="info-options">
+                                <div class="opt-card opt-featured">
+                                    <div class="opt-name">Khách Nội Địa</div>
+                                    <div class="opt-price">2.700.000đ</div>
+                                    <p>Trọn gói bao gồm homestay, tất cả bữa ăn, workshop chuyên sâu và hướng dẫn viên.
+                                    </p>
+                                </div>
+                                <div class="opt-card">
+                                    <div class="opt-name">Khách Quốc Tế</div>
+                                    <div class="opt-price">4.300.000đ</div>
+                                    <p>Equivalent to $170. Includes English/French speaking guide and premium logistics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="article-cta sales-cta">
+                            <div class="cta-message">Hành trình đánh thức nghệ nhân bên trong bạn đang chờ đợi!</div>
+                            <a href="#contact" class="btn-primary"
+                                onclick="document.getElementById('artisanTourModal').classList.remove('active');document.body.style.overflow='';">
+                                Đặt Tour Ngay Bây Giờ →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-top">

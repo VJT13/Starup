@@ -497,18 +497,295 @@
     }
 
     // ═══════════════════════════════════════
-    // BUY / BOOK BUTTONS — Scroll to Contact
+    // PRODUCT MODAL — Open / Close / Gallery
     // ═══════════════════════════════════════
-    $$('.btn-buy').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                const offset = 80;
-                const top = contactSection.offsetTop - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
+    const productModal = document.getElementById('productModal');
+    const productModalClose = document.getElementById('productModalClose');
+    const pmMainImage = document.getElementById('pmMainImage');
+    const pmThumbs = document.getElementById('pmThumbs');
+    const pmTitle = document.getElementById('pmTitle');
+    const pmPrice = document.getElementById('pmPrice');
+
+    // Open modal when clicking any product card or btn-buy
+    $$('.product-card[data-product]').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!productModal) return;
+
+            // Parse product data from attribute
+            let data;
+            try { data = JSON.parse(card.getAttribute('data-product')); } catch { return; }
+
+            // Populate title, subtitle, price
+            if (pmTitle) pmTitle.textContent = data.title || '';
+            const pmSubtitle = productModal.querySelector('.pm-subtitle');
+            if (pmSubtitle) pmSubtitle.textContent = data.subtitle || '';
+            if (pmPrice) pmPrice.textContent = data.price || 'Liên hệ';
+
+            // Update buy link
+            const pmBuyBtn = productModal.querySelector('.pm-buy-btn');
+            if (pmBuyBtn && data.link) pmBuyBtn.href = data.link;
+
+            // Build thumbnails gallery
+            if (pmThumbs && data.images && data.images.length) {
+                pmThumbs.innerHTML = '';
+                data.images.forEach((src, i) => {
+                    const thumb = document.createElement('div');
+                    thumb.className = 'pm-thumb' + (i === 0 ? ' active' : '');
+                    thumb.dataset.img = src;
+                    thumb.innerHTML = '<img src="' + src + '" alt="Ảnh ' + (i + 1) + '">';
+                    pmThumbs.appendChild(thumb);
+                });
+                // Set main image
+                if (pmMainImage) pmMainImage.src = data.images[0];
+
+                // Re-attach thumb click handlers
+                pmThumbs.querySelectorAll('.pm-thumb').forEach(t => {
+                    t.addEventListener('click', () => {
+                        pmThumbs.querySelectorAll('.pm-thumb').forEach(x => x.classList.remove('active'));
+                        t.classList.add('active');
+                        if (pmMainImage) pmMainImage.src = t.dataset.img;
+                    });
+                });
             }
+
+            // Show modal
+            productModal.classList.add('active');
+            productModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
         });
     });
+
+    // Close modal
+    function closeProductModal() {
+        if (productModal) {
+            productModal.classList.remove('active');
+            productModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (productModalClose) productModalClose.addEventListener('click', closeProductModal);
+    if (productModal) {
+        productModal.addEventListener('click', (e) => {
+            if (e.target === productModal) closeProductModal();
+        });
+    }
+
+    // Thumbnail gallery — Shopee-style
+    if (pmThumbs) {
+        pmThumbs.querySelectorAll('.pm-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                pmThumbs.querySelectorAll('.pm-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                if (pmMainImage) {
+                    pmMainImage.style.opacity = '0';
+                    setTimeout(() => {
+                        pmMainImage.src = thumb.dataset.img;
+                        pmMainImage.style.opacity = '1';
+                    }, 150);
+                }
+            });
+        });
+    }
+
+    // ═══════════════════════════════════════
+    // ARTICLE MODAL — Trải nghiệm độc bản
+    // ═══════════════════════════════════════
+    const articleModal = document.getElementById('articleModal');
+    const articleModalClose = document.getElementById('articleModalClose');
+    const valueDocBan = document.getElementById('valueDocBan');
+
+    if (valueDocBan && articleModal) {
+        valueDocBan.addEventListener('click', () => {
+            articleModal.classList.add('active');
+            articleModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closeArticleModal() {
+        if (articleModal) {
+            articleModal.classList.remove('active');
+            articleModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (articleModalClose) articleModalClose.addEventListener('click', closeArticleModal);
+    if (articleModal) {
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) closeArticleModal();
+        });
+    }
+
+    // Artisan modal
+    const artisanModal = document.getElementById('artisanModal');
+    const artisanModalClose = document.getElementById('artisanModalClose');
+    const valueNgheNhan = document.getElementById('valueNgheNhan');
+
+    if (valueNgheNhan && artisanModal) {
+        valueNgheNhan.addEventListener('click', () => {
+            artisanModal.classList.add('active');
+            artisanModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closeArtisanModal() {
+        if (artisanModal) {
+            artisanModal.classList.remove('active');
+            artisanModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (artisanModalClose) artisanModalClose.addEventListener('click', closeArtisanModal);
+    if (artisanModal) {
+        artisanModal.addEventListener('click', (e) => {
+            if (e.target === artisanModal) closeArtisanModal();
+        });
+    }
+
+    // Sustainable modal
+    const sustainableModal = document.getElementById('sustainableModal');
+    const sustainableModalClose = document.getElementById('sustainableModalClose');
+    const valueBenVung = document.getElementById('valueBenVung');
+
+    if (valueBenVung && sustainableModal) {
+        valueBenVung.addEventListener('click', () => {
+            sustainableModal.classList.add('active');
+            sustainableModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closeSustainableModal() {
+        if (sustainableModal) {
+            sustainableModal.classList.remove('active');
+            sustainableModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (sustainableModalClose) sustainableModalClose.addEventListener('click', closeSustainableModal);
+    if (sustainableModal) {
+        sustainableModal.addEventListener('click', (e) => {
+            if (e.target === sustainableModal) closeSustainableModal();
+        });
+    }
+
+    // Promo modal
+    const promoModal = document.getElementById('promoModal');
+    const promoModalClose = document.getElementById('promoModalClose');
+    const valuePromo = document.getElementById('valuePromo');
+
+    if (valuePromo && promoModal) {
+        valuePromo.addEventListener('click', () => {
+            promoModal.classList.add('active');
+            promoModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    function closePromoModal() {
+        if (promoModal) {
+            promoModal.classList.remove('active');
+            promoModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (promoModalClose) promoModalClose.addEventListener('click', closePromoModal);
+    if (promoModal) {
+        promoModal.addEventListener('click', (e) => {
+            if (e.target === promoModal) closePromoModal();
+        });
+    }
+
+    // ═══════════════════════════════════════
+    // ARTICLE MODAL HANDLERS
+    // ═══════════════════════════════════════
+
+    function setupModal(modalId, triggerId, closeId) {
+        const modal = document.getElementById(modalId);
+        const trigger = document.getElementById(triggerId);
+        const closeBtn = document.getElementById(closeId);
+
+        if (trigger && modal) {
+            trigger.addEventListener('click', () => {
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        const closeModal = () => {
+            if (modal) {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+        };
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        }
+    }
+
+    // Initialize all modals
+    setupModal('heritageModal', 'heritageCard', 'heritageModalClose'); // Existing Heritage Modal 1
+    setupModal('artisanModal', 'artisanCard', 'artisanModalClose');  // Existing Artisan Modal
+    setupModal('sustainableModal', 'sustainableCard', 'sustainableModalClose'); // Existing Sustainable Modal
+    setupModal('specialEventModal', 'specialEventCard', 'specialEventModalClose'); // Existing Special Event Modal
+    setupModal('potteryModal', 'tourNanGom', 'potteryModalClose'); // Pottery Workshop
+    setupModal('villageTourModal', 'tourLangCo', 'villageTourModalClose'); // NEW: Village Tour
+    setupModal('cuisineModal', 'tourAmThuc', 'cuisineModalClose'); // NEW: Bát Tràng Cuisine
+    setupModal('artisanTourModal', 'tour2N1D', 'artisanTourModalClose'); // NEW: 2N1D Artisan Tour
+
+    // ═══════════════════════════════════════
+    // PRODUCT CAROUSEL — Auto-scroll + Arrows
+    // ═══════════════════════════════════════
+    const productGrid = document.getElementById('productGrid');
+    const shopPrev = document.getElementById('shopPrev');
+    const shopNext = document.getElementById('shopNext');
+    const cardScrollAmount = 304; // 280px card + 24px gap
+
+    function scrollNext() {
+        if (!productGrid) return;
+        const maxScroll = productGrid.scrollWidth - productGrid.clientWidth;
+        if (productGrid.scrollLeft >= maxScroll - 10) {
+            productGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            productGrid.scrollBy({ left: cardScrollAmount, behavior: 'smooth' });
+        }
+    }
+
+    function scrollPrev() {
+        if (!productGrid) return;
+        if (productGrid.scrollLeft <= 10) {
+            productGrid.scrollTo({ left: productGrid.scrollWidth, behavior: 'smooth' });
+        } else {
+            productGrid.scrollBy({ left: -cardScrollAmount, behavior: 'smooth' });
+        }
+    }
+
+    if (productGrid) {
+        if (shopPrev) shopPrev.addEventListener('click', scrollPrev);
+        if (shopNext) shopNext.addEventListener('click', scrollNext);
+
+        // Auto-scroll every 3.5s
+        let autoScrollInterval = setInterval(scrollNext, 3500);
+
+        // Pause on hover
+        productGrid.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+        productGrid.addEventListener('mouseleave', () => {
+            autoScrollInterval = setInterval(scrollNext, 3500);
+        });
+    }
 
     // ═══════════════════════════════════════
     // INITIAL CALLS
