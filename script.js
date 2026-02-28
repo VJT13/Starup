@@ -533,18 +533,25 @@
                     const thumb = document.createElement('div');
                     thumb.className = 'pm-thumb' + (i === 0 ? ' active' : '');
                     thumb.dataset.img = src;
-                    thumb.innerHTML = '<img src="' + src + '" alt="Ảnh ' + (i + 1) + '">';
+                    thumb.innerHTML = '<img src="' + src + '" alt="Ảnh ' + (i + 1) + '" loading="lazy">';
                     pmThumbs.appendChild(thumb);
                 });
-                // Set main image
+
+                // Set main image initially
                 if (pmMainImage) pmMainImage.src = data.images[0];
 
-                // Re-attach thumb click handlers
+                // Re-attach thumb click handlers with smooth fade transition
                 pmThumbs.querySelectorAll('.pm-thumb').forEach(t => {
                     t.addEventListener('click', () => {
                         pmThumbs.querySelectorAll('.pm-thumb').forEach(x => x.classList.remove('active'));
                         t.classList.add('active');
-                        if (pmMainImage) pmMainImage.src = t.dataset.img;
+                        if (pmMainImage) {
+                            pmMainImage.style.opacity = '0';
+                            setTimeout(() => {
+                                pmMainImage.src = t.dataset.img;
+                                pmMainImage.style.opacity = '1';
+                            }, 150);
+                        }
                     });
                 });
             }
@@ -569,23 +576,6 @@
     if (productModal) {
         productModal.addEventListener('click', (e) => {
             if (e.target === productModal) closeProductModal();
-        });
-    }
-
-    // Thumbnail gallery — Shopee-style
-    if (pmThumbs) {
-        pmThumbs.querySelectorAll('.pm-thumb').forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                pmThumbs.querySelectorAll('.pm-thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
-                if (pmMainImage) {
-                    pmMainImage.style.opacity = '0';
-                    setTimeout(() => {
-                        pmMainImage.src = thumb.dataset.img;
-                        pmMainImage.style.opacity = '1';
-                    }, 150);
-                }
-            });
         });
     }
 

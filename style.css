@@ -593,6 +593,12 @@ a {
     padding: 0 32px;
 }
 
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 16px;
+    }
+}
+
 .hero-subtitle {
     font-size: clamp(0.75rem, 1.2vw, 0.95rem);
     font-weight: 500;
@@ -618,7 +624,7 @@ a {
     justify-content: center;
     gap: 0.15em;
     overflow: visible;
-    clip-path: inset(-5px -20px);
+    clip-path: inset(-10px -60px);
 }
 
 .title-word {
