@@ -577,6 +577,19 @@
         productModal.addEventListener('click', (e) => {
             if (e.target === productModal) closeProductModal();
         });
+
+        // Prevent "Mua Ngay" link clicks from being blocked by card handler
+        const pmBuyBtnEl = productModal.querySelector('.pm-buy-btn');
+        if (pmBuyBtnEl) {
+            pmBuyBtnEl.addEventListener('click', (e) => {
+                e.stopPropagation(); // Don't let card handler call preventDefault
+                // Open link in new tab
+                const href = pmBuyBtnEl.getAttribute('href');
+                if (href && href !== '#') {
+                    window.open(href, '_blank');
+                }
+            });
+        }
     }
 
     // ═══════════════════════════════════════
@@ -776,6 +789,50 @@
             autoScrollInterval = setInterval(scrollNext, 3500);
         });
     }
+
+
+    // ═══════════════════════════════════════
+    // SECTION NAV ARROWS — Up/Down scroll
+    // ═══════════════════════════════════════
+    const navUp = document.getElementById('sectionNavUp');
+    const navDown = document.getElementById('sectionNavDown');
+    const allSections = $$('section[id]');
+
+    function getCurrentSectionIndex() {
+        let idx = 0;
+        const scrollTop = window.scrollY + window.innerHeight / 3;
+        allSections.forEach((sec, i) => {
+            if (scrollTop >= sec.offsetTop) idx = i;
+        });
+        return idx;
+    }
+
+    function updateNavArrows() {
+        const idx = getCurrentSectionIndex();
+        if (navUp) navUp.classList.toggle('hidden', idx === 0);
+        if (navDown) navDown.classList.toggle('hidden', idx >= allSections.length - 1);
+    }
+
+    if (navUp) {
+        navUp.addEventListener('click', () => {
+            const idx = getCurrentSectionIndex();
+            if (idx > 0) {
+                allSections[idx - 1].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    if (navDown) {
+        navDown.addEventListener('click', () => {
+            const idx = getCurrentSectionIndex();
+            if (idx < allSections.length - 1) {
+                allSections[idx + 1].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateNavArrows, { passive: true });
+    updateNavArrows();
 
     // ═══════════════════════════════════════
     // INITIAL CALLS
